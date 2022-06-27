@@ -118,10 +118,11 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/roboto"
-            android:hint="@string/jane_example_com"
+            android:hint="@string/enter_username"
             android:minHeight="48dp"
+            android:inputType="text"
             android:paddingVertical="20dp"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/Gray"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@id/right_guideline"
             app:layout_constraintStart_toStartOf="@+id/left_guideline"
@@ -137,6 +138,16 @@
             app:layout_constraintEnd_toEndOf="@id/right_guideline"
             app:layout_constraintStart_toStartOf="@+id/left_guideline"
             tools:layout_editor_absoluteY="416dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btn_signUp"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
+            app:layout_constraintEnd_toEndOf="@id/right_guideline"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/policy"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

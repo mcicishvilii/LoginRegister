@@ -38,6 +38,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_group"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toEndOf="@id/left_guideline"
+        android:text="@string/logged_out"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:text="@string/logout"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/parentLayout"
+        app:layout_constraintEnd_toStartOf="@id/right_guideline"
+        app:layout_constraintStart_toStartOf="@id/left_guideline"
+        app:layout_constraintTop_toTopOf="@id/logo" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_login"

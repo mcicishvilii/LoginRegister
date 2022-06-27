@@ -6,4 +6,8 @@
     <string name="log_in">Log In</string>
     <string name="next">next</string>
     <string name="sign_up">sign up</string>
+    <string name="policy">By signing up, you agree to Photo’s Terms of Service and Privacy Policy.</string>
+    <string name="enter_username">enter username</string>
+    <string name="logged_out">logged out</string>
+    <string name="logout">logout</string>
 </resources>

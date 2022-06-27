@@ -52,6 +52,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/right_guideline"
+            app:layout_constraintTop_toBottomOf="@id/statusbar"
+            app:layout_constraintStart_toEndOf="@id/left_guideline"
+            android:text="logged out"
+            android:textSize="20sp"/>
+
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/IV_mobile_data"
             android:layout_width="15dp"

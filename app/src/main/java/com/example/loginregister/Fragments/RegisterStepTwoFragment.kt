@@ -41,6 +41,14 @@ class RegisterStepTwoFragment : Fragment() {
             registerUserName()
         }
 
+        binding.btnBack.setOnClickListener {
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.flContent, RegisterStepOneFragment())
+                addToBackStack(RegisterStepOneFragment::javaClass.name)
+                commit()
+            }
+        }
+
 
     }
 

@@ -43,6 +43,14 @@ class RegisterStepOneFragment: Fragment() {
             registerUser()
         }
 
+        binding.btnBack.setOnClickListener {
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.flContent, DashboardActivity())
+                addToBackStack(DashboardActivity::javaClass.name)
+                commit()
+            }
+        }
+
 
     }
 

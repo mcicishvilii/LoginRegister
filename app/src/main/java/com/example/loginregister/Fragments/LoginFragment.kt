@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.loginregister.DashboardActivity
+import com.example.loginregister.R
 import com.example.loginregister.databinding.LoginActivityBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
@@ -27,19 +29,26 @@ class LoginFragment: Fragment() {
     ): View? {
         _binding = LoginActivityBinding.inflate(inflater,container,false)
         return binding.root
+
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
+        checkLoggedInState()
 
         binding.btnLogin.setOnClickListener {
             loginWithUser()
         }
 
-
-
+        binding.btnBack.setOnClickListener {
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.flContent, DashboardActivity())
+                addToBackStack(DashboardActivity::javaClass.name)
+                commit()
+            }
+        }
 
 
     }
@@ -53,6 +62,7 @@ class LoginFragment: Fragment() {
                 try {
                     auth.signInWithEmailAndPassword(email,password).await()
                     withContext(Dispatchers.Main){
+                        checkLoggedInState()
                         Toast.makeText(requireContext(),"logged in!", Toast.LENGTH_SHORT).show()
                     }
                 }catch (e:Exception){
@@ -63,6 +73,19 @@ class LoginFragment: Fragment() {
             }
         }
     }
+
+    private fun checkLoggedInState() {
+        val user = auth.currentUser
+        if (user == null) {
+            binding.tvUsername.text = "You are not logged in"
+        } else {
+            binding.tvUsername.text = "logged in as ${user.displayName}"
+
+        }
+    }
+
+
+
 
 
     override fun onDestroyView() {
