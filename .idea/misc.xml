@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.192" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/dashboard_activity.xml" value="0.33" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/login_activity.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/register_step1_activity.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/register_step2_activity.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/register_step_one_activity.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/register_step_two_activity.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/registerfirststep.xml" value="0.33" />
+        <entry key="..\:/Users/usmd 2022/AndroidStudioProjects/LoginRegister/app/src/main/res/layout/registersecondstep.xml" value="0.3009833262077811" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
