@@ -1,6 +1,7 @@
 package com.example.loginregister.Fragments
 
 import android.os.Bundle
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -58,24 +59,26 @@ class RegisterStepOneFragment: Fragment() {
         val email = binding.etEmail.text.toString()
         val password = binding.etPassword.text.toString()
 
-        if(email.isNotEmpty() && password.isNotEmpty()){
+        if(email.isNotEmpty() && password.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(binding.etEmail.text.toString()).matches()){
             CoroutineScope(Dispatchers.IO).launch {
-                auth.createUserWithEmailAndPassword(email,password).await()
-                withContext(Dispatchers.Main){
+                try{
+                    auth.createUserWithEmailAndPassword(email,password).await()
+                    withContext(Dispatchers.Main){
 
-                    parentFragmentManager.beginTransaction().apply {
-                        replace(R.id.flContent, RegisterStepTwoFragment())
-                        addToBackStack(RegisterStepTwoFragment::javaClass.name)
-                        commit()
+                        parentFragmentManager.beginTransaction().apply {
+                            replace(R.id.flContent, RegisterStepTwoFragment())
+                            addToBackStack(RegisterStepTwoFragment::javaClass.name)
+                            commit()
+                        }
                     }
-
+                }catch (e:Exception){
                 }
             }
-        }else{
-            Toast.makeText(requireContext(),"hey!",Toast.LENGTH_SHORT).show()
+        }
+        else{
+            Toast.makeText(requireContext(),"not correct e-mail format!",Toast.LENGTH_SHORT).show()
         }
     }
-
 
 
     override fun onDestroyView() {

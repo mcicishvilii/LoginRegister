@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.loginregister.DashboardActivity
 import com.example.loginregister.R
 import com.example.loginregister.databinding.RegistersecondstepBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -63,7 +64,12 @@ class RegisterStepTwoFragment : Fragment() {
                 try {
                     user.updateProfile(updateProfile).await()
                     withContext(Dispatchers.Main){
-                        Toast.makeText(requireContext(),"coming soon dear ${userName}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(),"welcome $userName", Toast.LENGTH_SHORT).show()
+                        parentFragmentManager.beginTransaction().apply {
+                            replace(R.id.flContent, DashboardActivity())
+                            addToBackStack(RegisterStepOneFragment::javaClass.name)
+                            commit()
+                        }
                     }
                 }catch (e:Exception){
                     withContext(Dispatchers.Main){

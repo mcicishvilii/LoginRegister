@@ -56,11 +56,11 @@
             android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toStartOf="@id/right_guideline"
-            app:layout_constraintTop_toBottomOf="@id/statusbar"
-            app:layout_constraintStart_toEndOf="@id/left_guideline"
             android:text="logged out"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/right_guideline"
+            app:layout_constraintStart_toEndOf="@id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@id/statusbar" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -100,7 +100,7 @@
             android:id="@+id/btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="100dp"
             android:src="@drawable/ic_backbutton"
             app:layout_constraintStart_toStartOf="@id/left_guideline"
@@ -111,7 +111,7 @@
             android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/comfortaa"
             android:text="@string/log_in"
@@ -127,11 +127,14 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="40dp"
+            android:background="@drawable/editextdesign"
             android:fontFamily="@font/roboto"
-            android:hint="@string/jane_example_com"
+            android:hint="@string/enter_your_e_mail"
+            android:inputType="textEmailAddress"
             android:minHeight="48dp"
+            android:padding="7dp"
             android:paddingVertical="20dp"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/gray"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@id/right_guideline"
             app:layout_constraintStart_toStartOf="@+id/left_guideline"
@@ -143,11 +146,14 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/editextdesign"
             android:fontFamily="@font/roboto"
             android:hint="@string/please_enter_your_password"
+            android:inputType="textPassword"
             android:minHeight="48dp"
+            android:padding="7dp"
             android:paddingVertical="20dp"
-            android:textColorHint="@color/black"
+            android:textColorHint="@color/gray"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@id/right_guideline"
             app:layout_constraintStart_toStartOf="@+id/left_guideline"
@@ -159,15 +165,15 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/registerbutton"
             android:text="@string/log_in"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/right_guideline"
             app:layout_constraintStart_toStartOf="@+id/left_guideline"
             app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
 </ScrollView>

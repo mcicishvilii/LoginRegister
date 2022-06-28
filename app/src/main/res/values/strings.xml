@@ -10,4 +10,5 @@
     <string name="enter_username">enter username</string>
     <string name="logged_out">logged out</string>
     <string name="logout">logout</string>
+    <string name="enter_your_e_mail">enter your e-mail</string>
 </resources>
