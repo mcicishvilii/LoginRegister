@@ -11,4 +11,7 @@
     <string name="logged_out">logged out</string>
     <string name="logout">logout</string>
     <string name="enter_your_e_mail">enter your e-mail</string>
+    <string name="reset_password">reset password</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="forgotten_pass">forgot your passwod? click here to reset it</string>
 </resources>

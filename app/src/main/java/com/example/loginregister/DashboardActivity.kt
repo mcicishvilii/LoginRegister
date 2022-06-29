@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.loginregister.Fragments.LoginFragment
 import com.example.loginregister.Fragments.RegisterStepOneFragment
+import com.example.loginregister.Fragments.ResetPassFragment
 import com.example.loginregister.databinding.DashboardActivityBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -37,20 +38,26 @@ class DashboardActivity:Fragment() {
             checkLoggedInStateToLogOut()
         }
 
-
-            binding.btnLogin.setOnClickListener {
-                parentFragmentManager.beginTransaction().apply {
-                    replace(R.id.flContent, LoginFragment())
-                    addToBackStack(LoginFragment::javaClass.name)
-                    commit()
-                }
+        binding.btnLogin.setOnClickListener {
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.flContent, LoginFragment())
+                addToBackStack(LoginFragment::javaClass.name)
+                commit()
             }
-
+        }
 
         binding.btnRegister.setOnClickListener {
             parentFragmentManager.beginTransaction().apply {
                 replace(R.id.flContent, RegisterStepOneFragment())
                 addToBackStack(RegisterStepOneFragment::javaClass.name)
+                commit()
+            }
+        }
+
+        binding.tvForgotpass.setOnClickListener{
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.flContent, ResetPassFragment())
+                addToBackStack(ResetPassFragment::javaClass.name)
                 commit()
             }
         }
@@ -77,6 +84,8 @@ class DashboardActivity:Fragment() {
             binding.tvUsername.text = "You are not logged in"
         }
     }
+
+
 
     override fun onDestroyView() {
         _binding = null
